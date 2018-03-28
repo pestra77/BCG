@@ -317,6 +317,14 @@ body {
     margin-top: 30px;
     margin-bottom: 30px;
   }
+  @include media-breakpoint-down(xl) {
+    .container {
+      max-width: none;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
   h4 {
     color: #2a84fd;
     font-size: 22px;
@@ -325,8 +333,9 @@ body {
   }
   &__partners {
     h4 {
-      position: relative;
-      margin-top: 34px;
+      position: absolute;
+      right: -20px;
+      bottom: 25px;
       &:after {
         content: '';
         position: absolute;
@@ -341,8 +350,8 @@ body {
       text-align: right;
     }
     @include media-breakpoint-down(md) {
+      padding-right: 10px;
       h4 {
-        position: absolute;
         top: 0;
         right: 15px;
         margin-top: 18px;
@@ -359,11 +368,16 @@ body {
         text-align: left!important;
       }
       h4 {
-        left: 15px;
+        left: 0px;
         right: inherit;
       }
       h5:first-of-type {
         margin-top: 60px;
+      }
+    }
+    @include media-breakpoint-only(lg) {
+      h4 {
+        bottom: -15px;
       }
     }
   }
@@ -445,12 +459,12 @@ body {
     -webkit-box-shadow: 0 0 40px 20px rgba(231, 230, 230, 0.6);
             box-shadow: 0 0 40px 20px rgba(231, 230, 230, 0.6);
     &_right {
-      top: 0;
-      right: 115px;
+      top: 20px;
+      right: 110px;
     }
     &_left {
-      left: 101px;
-      bottom: 14px;
+      left: 110px;
+      bottom: 20px;
     }
     @include media-breakpoint-down(md) {
       &_right {
@@ -470,12 +484,21 @@ body {
         left: 110px;
       }
     }
+    @include media-breakpoint-only(lg) {
+      &_right {
+        top: -20px;
+      }
+      &_left {
+        bottom: -20px;
+      }
+    }
   }
   &__business {
     h4 {
       position: relative;
-      margin-top: 18px;
-      margin-bottom: 38px;
+      margin-top: 35px;
+      margin-left: -18px;
+      margin-bottom: 30px;
       &:before {
         content: '';
         position: absolute;
@@ -487,12 +510,27 @@ body {
       }
     }
     @include media-breakpoint-down(md) {
+      padding-left: 10px;
       h4 {
+        margin-top: 18px;
+        margin-left: 0px;
         margin-bottom: 20px;
         &:before {
           display: none;
         }
       }
+    }
+    @include media-breakpoint-only(lg) {
+      margin-top: 50px;
+      h4 {
+        position: absolute;
+        top: -0px;
+        margin: 0;
+        margin-left: -18px;
+      }
+    }
+    @include media-breakpoint-down(xs) {
+      padding-left: 0;
     }
   }
   &__title {
@@ -666,9 +704,9 @@ body {
       }
     }
     &_vertical {
-      -webkit-writing-mode: tb-rl;
+      -webkit-writing-mode: vertical-rl;
           -ms-writing-mode: tb-rl;
-              writing-mode: tb-rl;
+              writing-mode: vertical-rl;
       margin-top: 4px;
       margin-right: 0;
       margin-bottom: 0;

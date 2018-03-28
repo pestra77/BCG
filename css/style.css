@@ -8507,6 +8507,12 @@ body {
   }
 }
 
+.offers .container {
+  max-width: none;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .offers h4 {
   color: #2a84fd;
   font-size: 22px;
@@ -8515,8 +8521,9 @@ body {
 }
 
 .offers__partners h4 {
-  position: relative;
-  margin-top: 34px;
+  position: absolute;
+  right: -20px;
+  bottom: 25px;
 }
 
 .offers__partners h4:after {
@@ -8534,8 +8541,10 @@ body {
 }
 
 @media (max-width: 991.98px) {
+  .offers__partners {
+    padding-right: 10px;
+  }
   .offers__partners h4 {
-    position: absolute;
     top: 0;
     right: 15px;
     margin-top: 18px;
@@ -8553,11 +8562,17 @@ body {
     text-align: left !important;
   }
   .offers__partners h4 {
-    left: 15px;
+    left: 0px;
     right: inherit;
   }
   .offers__partners h5:first-of-type {
     margin-top: 60px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .offers__partners h4 {
+    bottom: -15px;
   }
 }
 
@@ -8653,13 +8668,13 @@ body {
 }
 
 .offers__icon_right {
-  top: 0;
-  right: 115px;
+  top: 20px;
+  right: 110px;
 }
 
 .offers__icon_left {
-  left: 101px;
-  bottom: 14px;
+  left: 110px;
+  bottom: 20px;
 }
 
 @media (max-width: 991.98px) {
@@ -8682,10 +8697,20 @@ body {
   }
 }
 
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .offers__icon_right {
+    top: -20px;
+  }
+  .offers__icon_left {
+    bottom: -20px;
+  }
+}
+
 .offers__business h4 {
   position: relative;
-  margin-top: 18px;
-  margin-bottom: 38px;
+  margin-top: 35px;
+  margin-left: -18px;
+  margin-bottom: 30px;
 }
 
 .offers__business h4:before {
@@ -8699,11 +8724,34 @@ body {
 }
 
 @media (max-width: 991.98px) {
+  .offers__business {
+    padding-left: 10px;
+  }
   .offers__business h4 {
+    margin-top: 18px;
+    margin-left: 0px;
     margin-bottom: 20px;
   }
   .offers__business h4:before {
     display: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .offers__business {
+    margin-top: 50px;
+  }
+  .offers__business h4 {
+    position: absolute;
+    top: -0px;
+    margin: 0;
+    margin-left: -18px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .offers__business {
+    padding-left: 0;
   }
 }
 
@@ -8922,9 +8970,9 @@ body {
 }
 
 .partners__tokens_vertical {
-  -webkit-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
-  writing-mode: tb-rl;
+  writing-mode: vertical-rl;
   margin-top: 4px;
   margin-right: 0;
   margin-bottom: 0;

@@ -568,7 +568,7 @@ body {
     &_right {
       width: 32%;
       float: right;
-      margin-top: 9%;
+      margin-top: 8%;
       margin-left: 20px;
       @include media-breakpoint-down(lg) {
         width: 45%;
@@ -633,8 +633,8 @@ body {
     }
   }
   &__tokens {
-    margin-top: 9%;
-    margin-bottom: 7%;
+    margin-top: 12%;
+    margin-bottom: 12%;
     color: #504f52;
     letter-spacing: -0.72px;
     & p {

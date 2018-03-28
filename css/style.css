@@ -8892,6 +8892,12 @@ body {
   margin-left: 0;
 }
 
+@media (max-width: 767.98px) {
+  .partners__tokens p {
+    margin-right: 0;
+  }
+}
+
 .partners__tokens_bold {
   position: relative;
   float: left;

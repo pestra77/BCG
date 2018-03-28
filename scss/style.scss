@@ -641,6 +641,9 @@ body {
       margin-right: 20px;
       margin-bottom: 8px;
       margin-left: 0;
+      @include media-breakpoint-down(sm) {
+        margin-right: 0;
+      }
     }
     &_bold {
       position: relative;
